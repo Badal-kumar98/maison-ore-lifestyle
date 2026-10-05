@@ -8,7 +8,7 @@ const essays = [
     date: 'October 12, MMXXVI',
     read: '8 minutes',
     excerpt: 'A visit to Nao Matsumoto’s pottery studio in the hills above Kyoto — where mistakes are called “conversation” and speed is quietly refused.',
-    image: '/craft-workshop.jpg',
+    image: './craft-workshop.jpg',
     tag: 'Craft',
   },
   {
@@ -17,7 +17,7 @@ const essays = [
     date: 'September 20, MMXXVI',
     read: '5 minutes',
     excerpt: 'We love muted palettes. But there is a difference between quietness and absence. Notes from a room that finally learned to breathe.',
-    image: '/editorial-bedroom.jpg',
+    image: './editorial-bedroom.jpg',
     tag: 'Interior',
   },
   {
@@ -26,7 +26,7 @@ const essays = [
     date: 'August 03, MMXXVI',
     read: '4 minutes',
     excerpt: 'A practical guide to composing a home the way one composes a life — slowly, patiently, and with room to be surprised.',
-    image: '/hero-interior.jpg',
+    image: './hero-interior.jpg',
     tag: 'Living',
   },
 ];

@@ -24,10 +24,10 @@ export default function About() {
 
       <section className="max-w-[1560px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-24">
         <div className="aspect-[3/4] lg:aspect-[4/5] overflow-hidden">
-          <img src="/craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="./craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="aspect-[3/4] lg:aspect-[4/5] overflow-hidden">
-          <img src="/editorial-bedroom.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="./editorial-bedroom.jpg" alt="" className="w-full h-full object-cover" />
         </div>
       </section>
 
@@ -73,10 +73,10 @@ export default function About() {
         </div>
         <div className="lg:col-span-7 grid grid-cols-2 gap-4">
           <div className="aspect-[3/4] overflow-hidden bg-[color:var(--color-cream)]">
-            <img src="/editorial-bedroom.jpg" alt="" className="w-full h-full object-cover" />
+            <img src="./editorial-bedroom.jpg" alt="" className="w-full h-full object-cover" />
           </div>
           <div className="aspect-[3/4] overflow-hidden bg-[color:var(--color-cream)] mt-12">
-            <img src="/craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
+            <img src="./craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

@@ -76,7 +76,7 @@ export default function Home() {
 
             <div className="lg:col-span-6 relative">
               <div className="relative aspect-[4/5] overflow-hidden bg-[color:var(--color-cream)]">
-                <img src="/hero-interior.jpg" alt="" className="w-full h-full object-cover" />
+                <img src="./hero-interior.jpg" alt="" className="w-full h-full object-cover" />
                 <div className="absolute left-6 top-6 flex flex-col gap-1 text-[10px] uppercase tracking-[0.28em] text-[color:var(--color-bone)] mix-blend-difference">
                   <span>Composition N° IV</span>
                   <span className="opacity-70">Livingroom, Paris studio</span>
@@ -164,7 +164,7 @@ export default function Home() {
         <div className="max-w-[1560px] mx-auto px-6 lg:px-10 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="aspect-[3/4] overflow-hidden">
-              <img src="/craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
+              <img src="./craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
             </div>
             <div className="mt-4 flex justify-between items-center text-[10px] uppercase tracking-[0.28em] opacity-60">
               <span>Plate 03 — The Wheel</span>
