@@ -34,8 +34,9 @@ export default function Header() {
           {/* Left nav */}
           <nav className="hidden lg:flex items-center gap-8">
             <NavLink to="/shop" className={linkClass}>Shop</NavLink>
-            <NavLink to="/shop?category=fragrance" className={linkClass}>Fragrance</NavLink>
-            <NavLink to="/shop?category=ceramics" className={linkClass}>Ceramics</NavLink>
+            <NavLink to="/shop?category=fragrance" className={linkClass}>Sugandh</NavLink>
+            <NavLink to="/shop?category=ceramics" className={linkClass}>Mitti</NavLink>
+            <NavLink to="/shop?category=textiles" className={linkClass}>Hathkargha</NavLink>
             <NavLink to="/journal" className={linkClass}>Journal</NavLink>
             <NavLink to="/about" className={linkClass}>Atelier</NavLink>
           </nav>
@@ -91,10 +92,11 @@ export default function Header() {
             <nav className="flex flex-col gap-6">
               {[
                 ['/shop', 'Shop All'],
-                ['/shop?category=fragrance', 'Fragrance'],
-                ['/shop?category=ceramics', 'Ceramics'],
-                ['/shop?category=textiles', 'Textiles'],
-                ['/shop?category=apothecary', 'Apothecary'],
+                ['/shop?category=fragrance', 'Sugandh & Attar'],
+                ['/shop?category=ceramics', 'Mitti & Ceramics'],
+                ['/shop?category=textiles', 'Hathkargha Textiles'],
+                ['/shop?category=lighting', 'Prakash & Brass'],
+                ['/shop?category=decor', 'Karigari & Objects'],
                 ['/journal', 'Journal'],
                 ['/about', 'The Atelier'],
               ].map(([to, label]) => (

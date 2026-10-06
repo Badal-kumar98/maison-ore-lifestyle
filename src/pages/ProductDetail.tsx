@@ -213,11 +213,11 @@ export default function ProductDetail() {
           <div className="mt-8 pt-8 border-t border-[color:var(--color-sand)] grid grid-cols-3 gap-6 text-[11px] uppercase tracking-[0.2em] text-[color:var(--color-mud)]">
             <div className="flex flex-col items-start gap-2">
               <Truck strokeWidth={1.25} className="w-4 h-4" />
-              <span>Free ship $180+</span>
+              <span>Free ship ₹2,999+</span>
             </div>
             <div className="flex flex-col items-start gap-2">
               <Leaf strokeWidth={1.25} className="w-4 h-4" />
-              <span>Carbon neutral</span>
+              <span>Zero plastic</span>
             </div>
             <div className="flex flex-col items-start gap-2">
               <RotateCw strokeWidth={1.25} className="w-4 h-4" />
@@ -252,22 +252,21 @@ export default function ProductDetail() {
                   <span>{product.dimensions}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[color:var(--color-mud)]">Origin</span>
+                  <span className="text-[color:var(--color-mud)]">Craft Origin</span>
                   <span>{product.origin}</span>
                 </div>
               </div>
             )}
             {acc('care', 'Care & Keeping',
               <p>
-                Wipe gently with a dry linen cloth. Store away from direct sunlight and abrupt
-                temperature change. If in doubt, err toward doing nothing at all — gentleness
-                is the entire art.
+                Wipe gently with a dry cotton or linen cloth. Store away from harsh direct sunlight.
+                Handcrafted objects breathe and mature gracefully with time — mindful care preserves their generational life.
               </p>
             )}
             {acc('shipping', 'Shipping & Returns',
               <p>
-                Sent within 48 hours in unbleached tissue and linen ribbon. Complimentary carbon-neutral
-                delivery on orders over $180. Returns accepted within 30 days for a full refund.
+                Dispatched within 48 hours in handmade recycled paper and cotton string. Complimentary
+                pan-India delivery on orders over ₹2,999. Easy returns within 30 days.
               </p>
             )}
           </div>

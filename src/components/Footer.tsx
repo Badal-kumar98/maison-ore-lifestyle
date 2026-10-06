@@ -50,7 +50,7 @@ export default function Footer() {
             </form>
             <div className="mt-3 text-[11px] tracking-[0.16em] uppercase h-4">
               {status === 'sending' && <span className="opacity-60">Sending…</span>}
-              {status === 'ok' && <span className="text-[color:var(--color-clay)]">Merci — check your inbox.</span>}
+              {status === 'ok' && <span className="text-[color:var(--color-clay)]">Dhanyawaad — check your inbox.</span>}
               {status === 'err' && <span className="text-[color:var(--color-clay)]">Please enter a valid email.</span>}
             </div>
           </div>
@@ -60,11 +60,11 @@ export default function Footer() {
             <div>
               <div className="text-[11px] uppercase tracking-[0.24em] opacity-60 mb-5">Shop</div>
               <ul className="space-y-3 font-display text-lg">
-                <li><Link to="/shop?category=fragrance" className="link-underline">Fragrance</Link></li>
-                <li><Link to="/shop?category=ceramics" className="link-underline">Ceramics</Link></li>
-                <li><Link to="/shop?category=textiles" className="link-underline">Textiles</Link></li>
-                <li><Link to="/shop?category=apothecary" className="link-underline">Apothecary</Link></li>
-                <li><Link to="/shop?category=objects" className="link-underline">Objects</Link></li>
+                <li><Link to="/shop?category=fragrance" className="link-underline">Sugandh & Attar</Link></li>
+                <li><Link to="/shop?category=ceramics" className="link-underline">Mitti & Ceramics</Link></li>
+                <li><Link to="/shop?category=textiles" className="link-underline">Hathkargha Textiles</Link></li>
+                <li><Link to="/shop?category=lighting" className="link-underline">Prakash & Brass</Link></li>
+                <li><Link to="/shop?category=decor" className="link-underline">Karigari & Objects</Link></li>
               </ul>
             </div>
             <div>
@@ -72,17 +72,17 @@ export default function Footer() {
               <ul className="space-y-3 font-display text-lg">
                 <li><Link to="/about" className="link-underline">Atelier</Link></li>
                 <li><Link to="/journal" className="link-underline">Journal</Link></li>
-                <li><a className="link-underline">Stockists</a></li>
-                <li><a className="link-underline">Trade</a></li>
+                <li><a className="link-underline">Artisans & Guilds</a></li>
+                <li><a className="link-underline">Heritage Trade</a></li>
               </ul>
             </div>
             <div>
               <div className="text-[11px] uppercase tracking-[0.24em] opacity-60 mb-5">Assistance</div>
               <ul className="space-y-3 font-display text-lg">
-                <li><a className="link-underline">Care Guide</a></li>
-                <li><a className="link-underline">Shipping</a></li>
-                <li><a className="link-underline">Returns</a></li>
-                <li><a className="link-underline">Contact</a></li>
+                <li><a className="link-underline">Care & Keeping</a></li>
+                <li><a className="link-underline">Pan-India Shipping</a></li>
+                <li><a className="link-underline">Returns & Repairs</a></li>
+                <li><a className="link-underline">Contact Concierge</a></li>
               </ul>
             </div>
           </div>
@@ -95,16 +95,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-4">
             <a className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em]">
-              <Instagram strokeWidth={1.5} className="w-4 h-4" /> @maison.ore
+              <Instagram strokeWidth={1.5} className="w-4 h-4" /> @maison.ore.lifestyle
             </a>
             <div className="text-[11px] uppercase tracking-[0.24em] opacity-60">
-              Paris · 14 rue de S&eacute;vign&eacute;
+              Delhi NCR · Sector 62, Noida, India - 201301 · Atelier Mehrauli
             </div>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row justify-between gap-4 text-[11px] uppercase tracking-[0.2em] opacity-50">
-          <div>© MMXXVI Maison Or&eacute; — All rights reserved</div>
+          <div>© 2026 Maison Or&eacute; Lifestyle — Handcrafted across India</div>
           <div className="flex gap-6">
             <a>Privacy</a>
             <a>Terms</a>

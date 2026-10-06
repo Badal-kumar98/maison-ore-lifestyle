@@ -9,7 +9,7 @@
 
 ## 🌟 Overview
 
-**Maison Oré** is an artisanal lifestyle brand boutique designed with quiet luxury aesthetics, bespoke typography, and contemplative pacing. Showcases hand-thrown Kyoto ceramics, small-batch Moroccan botanicals, French flax linen, and Italian spun brass illumination.
+**Maison Oré** is an artisanal Indian lifestyle brand boutique designed with quiet luxury aesthetics, bespoke typography, and contemplative pacing. Showcases hand-thrown Khurja ceramics, small-batch Kannauj botanical attars, Kutch organic Kala cotton, Moradabad spun brass, and Bastar Dhokra lost-wax bronze crafts.
 
 ### ✨ Key Features
 - **Curated Catalogue Experience**: Browse by intentional chapters (Fragrance, Ceramics, Textiles, Lighting, Objects).

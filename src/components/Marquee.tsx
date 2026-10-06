@@ -1,10 +1,10 @@
 export default function Marquee() {
   const items = [
-    'Complimentary shipping on orders over $180',
-    'New — Ourika Fragrance Collection',
-    'Studio hours · Tues–Sat · 11–7',
-    'Made slowly. Kept forever.',
-    'Now shipping to 47 countries',
+    'Complimentary pan-India shipping on orders over ₹2,999',
+    'New — Kannauj Mitti & Gulab Botanical Attar',
+    'Studio hours · Tues–Sun · 11:00 AM – 8:00 PM',
+    'Shuddh Karigari. Made slowly, kept forever.',
+    'Handcrafted across 14 heritage craft clusters of India',
   ];
   const strip = [...items, ...items, ...items];
   return (

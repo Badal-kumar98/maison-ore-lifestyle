@@ -44,12 +44,12 @@ export default function OrderConfirmation() {
           Order N° <span className="tabular text-[color:var(--color-ink)]">{order.order_number}</span>
         </div>
         <h1 className="font-display text-5xl lg:text-7xl leading-[0.95]">
-          Merci, <span className="font-display-wonk italic text-[color:var(--color-terracotta)]">{order.customer_name.split(' ')[0]}</span>.
+          Dhanyawaad, <span className="font-display-wonk italic text-[color:var(--color-terracotta)]">{order.customer_name.split(' ')[0]}</span>.
         </h1>
         <p className="mt-6 max-w-lg mx-auto text-[color:var(--color-mud)] leading-relaxed">
           Your order has been received. A confirmation has been sent to{' '}
-          <span className="text-[color:var(--color-ink)]">{order.customer_email}</span>. Objects
-          are being wrapped in the atelier as we speak.
+          <span className="text-[color:var(--color-ink)]">{order.customer_email}</span>. Your handcrafted objects
+          are being packaged with care in our atelier.
         </p>
       </div>
 

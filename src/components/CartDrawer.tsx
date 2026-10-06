@@ -125,13 +125,13 @@ export default function CartDrawer() {
               <div className="flex justify-between text-sm">
                 <span className="text-[color:var(--color-mud)]">Shipping</span>
                 <span className="tabular">
-                  {subtotal >= 180 ? 'Complimentary' : money(12)}
+                  {subtotal >= 2999 ? 'Complimentary' : money(199)}
                 </span>
               </div>
               <div className="flex justify-between items-baseline pt-4 border-t border-[color:var(--color-sand)]">
                 <span className="font-display text-lg">Total</span>
                 <span className="font-display text-2xl tabular">
-                  {money(subtotal + (subtotal >= 180 ? 0 : 12))}
+                  {money(subtotal + (subtotal >= 2999 ? 0 : 199))}
                 </span>
               </div>
               <Link
@@ -142,7 +142,7 @@ export default function CartDrawer() {
                 Proceed to checkout <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </Link>
               <p className="text-center text-[10px] uppercase tracking-[0.2em] text-[color:var(--color-mud)]">
-                Free shipping over $180 · 30-day returns
+                Free pan-India shipping over ₹2,999 · 30-day returns
               </p>
             </footer>
           </>

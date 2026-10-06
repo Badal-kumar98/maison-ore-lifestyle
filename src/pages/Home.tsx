@@ -41,9 +41,9 @@ export default function Home() {
                 <span className="text-[color:var(--color-mud)]">kept for longer.</span>
               </h1>
               <p className="mt-8 lg:mt-10 max-w-md text-[15px] leading-[1.7] text-[color:var(--color-espresso)]/85">
-                A small, considered catalogue of ceramics, fragrance and textiles —
-                composed with fifty-three artisans across France, Japan and Morocco.
-                Made in intentionally small volumes. Sent with a handwritten note.
+                A small, considered collection of Khurja ceramics, Kannauj botanical attars and Indian handlooms —
+                composed with fifty-three master Karigars across Uttar Pradesh, Kutch, Kashmir and Bengal.
+                Handcrafted in intentionally small batches. Sent with a handwritten note.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <Link
@@ -62,9 +62,9 @@ export default function Home() {
 
               <div className="mt-14 pt-8 border-t border-[color:var(--color-sand)] grid grid-cols-3 gap-6">
                 {[
-                  ['53', 'Artisans'],
-                  ['12', 'Materials'],
-                  ['∞', 'Guarantee'],
+                  ['53', 'Karigars'],
+                  ['14', 'Craft Hubs'],
+                  ['∞', 'Heritage'],
                 ].map(([n, l]) => (
                   <div key={l}>
                     <div className="font-display text-4xl lg:text-5xl tabular">{n}</div>
@@ -167,8 +167,8 @@ export default function Home() {
               <img src="./craft-workshop.jpg" alt="" className="w-full h-full object-cover" />
             </div>
             <div className="mt-4 flex justify-between items-center text-[10px] uppercase tracking-[0.28em] opacity-60">
-              <span>Plate 03 — The Wheel</span>
-              <span>Kyoto, 04:12</span>
+              <span>Plate 03 — The Potter's Wheel</span>
+              <span>Khurja, Uttar Pradesh</span>
             </div>
           </div>
           <div className="lg:col-span-7 lg:pl-12 order-1 lg:order-2">
@@ -178,18 +178,17 @@ export default function Home() {
               <span className="font-display-wonk italic text-[color:var(--color-clay)]">made by hand.</span>
             </h2>
             <p className="mt-8 max-w-xl text-[15px] leading-[1.75] opacity-80">
-              Our ceramics are formed at a wheel in a small studio outside Kyoto by
-              Nao Matsumoto, whose family has worked clay for four generations. Each
-              vessel is a little different from the last — which is, we think, the point.
-              Perfection belongs to machines. Character belongs to us.
+              Our ceramics are hand-thrown at the wheel in a family-run studio in Khurja,
+              where master potters have worked alluvial clay for four generations. Each
+              earthen vessel is a little different from the last — which is the true soul of Karigari.
+              Perfection belongs to machines. Character and warmth belong to human hands.
             </p>
             <blockquote className="mt-12 pl-6 border-l border-[color:var(--color-clay)]/50 max-w-lg">
               <p className="font-display italic text-xl lg:text-2xl leading-snug">
-                “What we make with the hand carries the hand within it — you can feel the maker
-                after the maker has gone.”
+                “What the Karigar shapes with patience carries his spirit within it — you can feel the warmth of the maker long after the craft is complete.”
               </p>
               <footer className="mt-4 text-[11px] uppercase tracking-[0.28em] opacity-70">
-                — Nao Matsumoto, Ceramicist
+                — Master Ramprasad Prajapati, Khurja Potter Guild
               </footer>
             </blockquote>
             <Link to="/journal" className="mt-10 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] link-underline pb-1">

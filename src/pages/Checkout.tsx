@@ -23,12 +23,12 @@ export default function Checkout() {
   const [step, setStep] = useState<'info' | 'shipping' | 'payment'>('info');
   const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState<FormState>({
-    email: '', firstName: '', lastName: '', address: '', city: '', postal: '', country: 'France',
+    email: '', firstName: '', lastName: '', address: '', city: 'Noida', postal: '201301', country: 'India',
     card: '', exp: '', cvc: '',
   });
   const [errors, setErrors] = useState<Partial<FormState>>({});
 
-  const shipping = subtotal >= 180 ? 0 : 12;
+  const shipping = subtotal >= 2999 ? 0 : 199;
   const total = subtotal + shipping;
 
   const set = (k: keyof FormState, v: string) => {
@@ -172,14 +172,14 @@ export default function Checkout() {
             <div className="space-y-8 animate-fade-up">
               <div>
                 <h2 className="font-display text-4xl">Delivery <span className="font-display-wonk italic">address</span>.</h2>
-                <p className="text-[color:var(--color-mud)] mt-2">Sent by tracked, carbon-neutral courier.</p>
+                <p className="text-[color:var(--color-mud)] mt-2">Dispatched via insured, climate-conscious pan-India courier.</p>
               </div>
-              {input('address', 'Street address', 'text', '14 rue de Sévigné')}
+              {input('address', 'Street address / Locality', 'text', 'Sector 62, Noida, Delhi NCR')}
               <div className="grid grid-cols-2 gap-6">
-                {input('city', 'City')}
-                {input('postal', 'Postal code')}
+                {input('city', 'City', 'text', 'Noida')}
+                {input('postal', 'PIN Code (6 digits)', 'text', '201301')}
               </div>
-              {input('country', 'Country')}
+              {input('country', 'Country', 'text', 'India')}
               <div className="flex gap-3">
                 <button onClick={() => setStep('info')} className="px-6 py-4 text-[11px] uppercase tracking-[0.28em] border border-[color:var(--color-sand)]">
                   Back
@@ -196,16 +196,21 @@ export default function Checkout() {
               <div>
                 <h2 className="font-display text-4xl">Secure <span className="font-display-wonk italic">payment</span>.</h2>
                 <p className="text-[color:var(--color-mud)] mt-2 flex items-center gap-2">
-                  <Lock className="w-3.5 h-3.5" strokeWidth={1.5} /> Encrypted transaction
+                  <Lock className="w-3.5 h-3.5" strokeWidth={1.5} /> 256-bit encrypted transaction · UPI / RuPay / Cards
                 </p>
               </div>
-              {input('card', 'Card number', 'text', '4242 4242 4242 4242')}
+              <div className="flex gap-3 p-3 bg-[color:var(--color-cream)] border border-[color:var(--color-sand)] rounded-sm text-xs font-medium text-[color:var(--color-mud)]">
+                <span className="px-3 py-1.5 bg-white text-[color:var(--color-ink)] rounded shadow-xs font-semibold">UPI / GPay / PhonePe</span>
+                <span className="px-3 py-1.5 bg-white text-[color:var(--color-ink)] rounded shadow-xs font-semibold">RuPay / Visa / MC</span>
+                <span className="px-3 py-1.5 bg-white text-[color:var(--color-ink)] rounded shadow-xs font-semibold">NetBanking</span>
+              </div>
+              {input('card', 'Card number / UPI ID', 'text', '4242 •••• •••• 4242 or user@upi')}
               <div className="grid grid-cols-2 gap-6">
                 {input('exp', 'Expiry (MM / YY)', 'text', '12 / 28')}
                 {input('cvc', 'CVC', 'text', '•••')}
               </div>
               <div className="bg-[color:var(--color-cream)] p-5 text-sm text-[color:var(--color-mud)] leading-relaxed">
-                This is a demonstration checkout. No card is charged and no data leaves your browser.
+                This is a demonstration craft checkout. No card or UPI is charged.
               </div>
               <div className="flex gap-3">
                 <button onClick={() => setStep('shipping')} className="px-6 py-4 text-[11px] uppercase tracking-[0.28em] border border-[color:var(--color-sand)]">

@@ -7,7 +7,7 @@ export default function About() {
       <section className="max-w-[1560px] mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-16">
         <div className="text-[11px] uppercase tracking-[0.28em] text-[color:var(--color-mud)] mb-8 flex items-center gap-3">
           <span className="w-8 h-px bg-[color:var(--color-mud)]" />
-          The Atelier — Founded MMXIX in Paris
+          The Atelier — Handcrafted in India · Studio Delhi NCR
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <h1 className="lg:col-span-8 font-display text-5xl md:text-7xl lg:text-[112px] leading-[0.9] tracking-[-0.035em]">
@@ -15,9 +15,9 @@ export default function About() {
             made by <span className="font-display-wonk italic">quiet</span> hands.
           </h1>
           <p className="lg:col-span-4 text-[color:var(--color-mud)] leading-relaxed">
-            Maison Oré was founded in a courtyard in the Marais by two former editors
-            who had grown tired of the pace of things. We work with fifty-three
-            artisans across France, Japan and Morocco.
+            Maison Oré was conceived in an artisan studio in Delhi NCR as a sanctuary
+            for slow Indian craft. We work in direct partnership with fifty-three
+            generational Karigars across Uttar Pradesh, Gujarat, Kashmir and Bengal.
           </p>
         </div>
       </section>
@@ -39,10 +39,10 @@ export default function About() {
           </div>
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
             {[
-              ['Fewer, better', 'Small editions of objects worth keeping — nothing that will bore you in three years.'],
-              ['Materials first', 'Only linen, wool, stoneware, hand-blown glass, brass. We refuse plastic and anything pretending to be something it is not.'],
-              ['A fair table', 'Our makers are named, credited and paid a living wage. The margin sits with the maker, not the middle.'],
-              ['Kept forever', 'A lifetime repair promise on every object. Longevity is our sustainability policy.'],
+              ['Fewer, Better', 'Small editions of honest Indian objects worth keeping — nothing hurried, nothing disposable.'],
+              ['Shuddh Materials', 'Only indigenous Kala cotton, handspun wool, alluvial stoneware, mouth-blown glass and raw brass. Zero plastic.'],
+              ['Fair to the Karigar', 'Our master craftsmen are named, credited and paid dignified craft compensation. The pride sits with the maker.'],
+              ['Kept Forever', 'Heirloom endurance on every object. Longevity and parampara is our sustainability promise.'],
             ].map(([t, d], i) => (
               <div key={t}>
                 <div className="font-display text-4xl tabular text-[color:var(--color-terracotta)]">{(i + 1).toString().padStart(2, '0')}</div>
@@ -56,16 +56,16 @@ export default function About() {
 
       <section className="max-w-[1560px] mx-auto px-6 lg:px-10 py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5">
-          <div className="text-[11px] uppercase tracking-[0.28em] text-[color:var(--color-mud)] mb-4">The Founders</div>
-          <h2 className="font-display text-4xl lg:text-6xl leading-[0.95]">Camille &amp; Théo.</h2>
+          <div className="text-[11px] uppercase tracking-[0.28em] text-[color:var(--color-mud)] mb-4">The Curators</div>
+          <h2 className="font-display text-4xl lg:text-6xl leading-[0.95]">Badal Kumar &amp; Guild.</h2>
           <p className="mt-6 text-[color:var(--color-mud)] leading-relaxed max-w-md">
-            Camille Oré spent nine years as design editor at a magazine you have probably
-            read. Théo Blériot was, until quite recently, a chef. Together they compose
-            each collection and answer every note personally.
+            Maison Oré is curated by Badal Kumar alongside an atelier team devoted to
+            preserving and elevating India's indigenous craft traditions. Together we
+            compose each seasonal edition in intimate collaboration with master craftspeople.
           </p>
           <blockquote className="mt-10 pl-5 border-l-2 border-[color:var(--color-terracotta)] font-display italic text-xl lg:text-2xl max-w-md leading-snug">
-            “We wanted a house that felt like a well-set table — generous, particular,
-            slow, and made for the people we love.”
+            “We wanted a maison that honors the timeless dignity of Indian handcraft — slow,
+            honest, deeply rooted in the soil, and made for mindful living.”
           </blockquote>
           <Link to="/shop" className="mt-10 inline-flex items-center gap-3 bg-[color:var(--color-ink)] text-[color:var(--color-bone)] px-8 py-4 text-[11px] uppercase tracking-[0.28em] hover:bg-[color:var(--color-terracotta)] transition-colors">
             Enter the shop <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
