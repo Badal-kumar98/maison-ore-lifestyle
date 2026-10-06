@@ -106,7 +106,7 @@ export default function Header() {
               ))}
             </nav>
             <div className="mt-16 text-[11px] uppercase tracking-[0.24em] text-[color:var(--color-mud)]">
-              Paris — New York — Kyoto
+              Delhi NCR — Mehrauli — Jaipur
             </div>
           </div>
         </div>

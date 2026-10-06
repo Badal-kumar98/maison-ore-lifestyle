@@ -46,7 +46,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     if (!sessionId) return;
     try {
       const res = await fetch(`/api/cart?session_id=${encodeURIComponent(sessionId)}`);
-      if (res.ok) {
+      const ct = res.headers.get('content-type') || '';
+      if (res.ok && ct.includes('application/json')) {
         const data = await res.json();
         if (Array.isArray(data)) {
           setItems(data);
@@ -69,7 +70,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ session_id: sessionId, product_id: productId, quantity, variant }),
       });
-      if (res.ok) {
+      const ct = res.headers.get('content-type') || '';
+      if (res.ok && ct.includes('application/json')) {
         await refresh();
         setIsOpen(true);
         return;
@@ -79,20 +81,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
     // Local fallback
     const p = fallbackProducts.find(x => x.id === productId);
     if (p) {
-      const existing = items.find(i => i.product.id === productId && i.variant === variant);
-      let next: CartItem[];
-      if (existing) {
-        next = items.map(i => i === existing ? { ...i, quantity: i.quantity + quantity } : i);
-      } else {
-        const newItem: CartItem = {
-          id: Date.now(),
-          quantity,
-          variant: variant || '',
-          product: p,
-        };
-        next = [...items, newItem];
-      }
-      saveLocal(next);
+      setItems(prev => {
+        const existing = prev.find(i => i.product.id === productId && i.variant === variant);
+        let next: CartItem[];
+        if (existing) {
+          next = prev.map(i => i === existing ? { ...i, quantity: i.quantity + quantity } : i);
+        } else {
+          const newItem: CartItem = {
+            id: Date.now(),
+            quantity,
+            variant: variant || '',
+            product: p,
+          };
+          next = [...prev, newItem];
+        }
+        try { localStorage.setItem('maison_ore_cart', JSON.stringify(next)); } catch {}
+        return next;
+      });
     }
     setIsOpen(true);
   };
@@ -104,17 +109,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, quantity }),
       });
-      if (res.ok) {
+      const ct = res.headers.get('content-type') || '';
+      if (res.ok && ct.includes('application/json')) {
         await refresh();
         return;
       }
     } catch {}
 
-    if (quantity <= 0) {
-      saveLocal(items.filter(i => i.id !== id));
-    } else {
-      saveLocal(items.map(i => i.id === id ? { ...i, quantity } : i));
-    }
+    setItems(prev => {
+      let next: CartItem[];
+      if (quantity <= 0) {
+        next = prev.filter(i => i.id !== id);
+      } else {
+        next = prev.map(i => i.id === id ? { ...i, quantity } : i);
+      }
+      try { localStorage.setItem('maison_ore_cart', JSON.stringify(next)); } catch {}
+      return next;
+    });
   };
 
   const remove = async (id: number) => {
@@ -124,12 +135,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id }),
       });
-      if (res.ok) {
+      const ct = res.headers.get('content-type') || '';
+      if (res.ok && ct.includes('application/json')) {
         await refresh();
         return;
       }
     } catch {}
-    saveLocal(items.filter(i => i.id !== id));
+    setItems(prev => {
+      const next = prev.filter(i => i.id !== id);
+      try { localStorage.setItem('maison_ore_cart', JSON.stringify(next)); } catch {}
+      return next;
+    });
   };
 
   const clear = async () => {
@@ -140,7 +156,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         body: JSON.stringify({ session_id: sessionId, clear: true }),
       });
     } catch {}
-    saveLocal([]);
+    setItems([]);
+    try { localStorage.setItem('maison_ore_cart', JSON.stringify([])); } catch {}
   };
 
   const count = useMemo(() => items.reduce((a, b) => a + b.quantity, 0), [items]);
